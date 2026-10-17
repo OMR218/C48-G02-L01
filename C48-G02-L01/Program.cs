@@ -34,8 +34,18 @@ namespace LINQ
             //3.Sort all products by UnitPrice(ascending). Print each
             //product's name and price.
 
-            var SortedProducts = Source.ProductList.OrderBy(p => p.UnitPrice);
-            foreach (var item in SortedProducts)
+            //var SortedProducts = Source.ProductList.OrderBy(p => p.UnitPrice);
+            //foreach (var item in SortedProducts)
+            //{
+            //    Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
+            //}
+            #endregion
+
+            #region Question 4
+            //4.Get all products where UnitPrice is between 10 and 30
+
+            var result = Source.ProductList.Where(P => P.UnitPrice >= 10 && P.UnitPrice <= 30);
+            foreach (var item in result)
             {
                 Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
             }
