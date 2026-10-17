@@ -367,6 +367,16 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 18
+            // 18. Generate the multiplication table for 7.
+
+            //var result = Enumerable.Range(1, 10).Select(i => $"7 x {i} = {7 * i}");
+            //foreach (var item in result)
+            //{
+            // Console.WriteLine(item);
+            //}
+            #endregion
+
             #endregion
         }
     }
