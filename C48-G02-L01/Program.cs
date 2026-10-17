@@ -187,8 +187,7 @@ namespace LINQ
             #endregion
             #endregion
 
-            #region Second Assignment
-            #region Question 1 
+            #region Second Assignment 
             #region Question 1
             // 1. Get the top 3 most expensive products. Print each product's name and price.
 
@@ -250,11 +249,21 @@ namespace LINQ
             //var result = Source.ProductList.GroupBy(p => p.Category, p => p.ProductName);
             //foreach (var group in result)
             //{
-            // Console.WriteLine(group.Key);
-            // foreach (var name in group)
-            // {
-            // Console.WriteLine(name);
-            // }
+            //    Console.WriteLine(group.Key);
+            //    foreach (var name in group)
+            //    {
+            //        Console.WriteLine(name);
+            //    }
+            //}
+            #endregion
+
+            #region Question 8
+            // 8. Find all categories that have more than 3 products.
+
+            //var result = Source.ProductList.GroupBy(p => p.Category).Where(g => g.Count() > 3).Select(g => g.Key);
+            //foreach (var category in result)
+            //{
+            // Console.WriteLine(category);
             //}
             #endregion
 
