@@ -1,6 +1,7 @@
 ﻿using LINQ.DataSources;
 using LINQ.Models;
 using System.Drawing;
+using System.Xml.Linq;
 using static LINQ.DataSources.Source;
 namespace LINQ
 {
@@ -55,11 +56,32 @@ namespace LINQ
             //5. Get all products that are in stock (UnitsInStock > 0) and 
             //belong to the "Condiments" category.
 
-            var result = Source.ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Condiments");
+            //var result = Source.ProductList.Where(P => P.UnitsInStock > 0 && P.Category == "Condiments");
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}, UnitsInStock: {item.UnitsInStock}");
+            //}
+            #endregion
+
+            #region Question 6
+            //6.Create a new anonymous type with three properties: 
+            //● Name → the product name
+            //● Price → the unit price
+            //● StockStatus → a string: "Available" if UnitsInStock > 0, 
+            //otherwise "Out of Stock"
+            //● Print the result.
+
+            var result = Source.ProductList.Select(p => new
+            {
+                Name = p.ProductName,
+                Price = p.UnitPrice,
+                StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            });
 
             foreach (var item in result)
             {
-                Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}, UnitsInStock: {item.UnitsInStock}");
+                Console.WriteLine($"Product: {item.Name}, Price: {item.Price}, Stock Status: {item.StockStatus}");
             }
             #endregion
         }
