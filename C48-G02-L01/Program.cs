@@ -243,6 +243,21 @@ namespace LINQ
             // Console.WriteLine($"{group.Key}: {group.Count()} products");
             //}
             #endregion
+
+            #region Question 7
+            // 7. Group products by Category and select only product names for each group.
+
+            //var result = Source.ProductList.GroupBy(p => p.Category, p => p.ProductName);
+            //foreach (var group in result)
+            //{
+            // Console.WriteLine(group.Key);
+            // foreach (var name in group)
+            // {
+            // Console.WriteLine(name);
+            // }
+            //}
+            #endregion
+
             #endregion
         }
     }
