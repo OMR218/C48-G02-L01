@@ -1,6 +1,7 @@
 ﻿using LINQ.DataSources;
 using LINQ.Models;
 using System.Drawing;
+using System.Globalization;
 using System.Xml.Linq;
 using static LINQ.DataSources.Source;
 namespace LINQ
@@ -100,13 +101,25 @@ namespace LINQ
             //8.Sort ProductList by Category ascending, then within each
             //category, sort by UnitPrice descending. 
 
-            var result = Source.ProductList
-                .OrderBy(p => p.Category)
-                .ThenByDescending(p => p.UnitPrice);
+            //var result = Source.ProductList
+            //    .OrderBy(p => p.Category)
+            //    .ThenByDescending(p => p.UnitPrice);
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Category: {item.Category}, Product: {item.ProductName}, Price: {item.UnitPrice}");
+            //}
+            #endregion
+
+            #region Question 9
+            //9.Get all products from the "Beverages" category, sorted by
+            //UnitsInStock descending. Print name and stock.
+
+            var result = Source.ProductList.Where(P => P.Category == "Beverages").OrderByDescending(P => P.UnitsInStock);
 
             foreach (var item in result)
             {
-                Console.WriteLine($"Category: {item.Category}, Product: {item.ProductName}, Price: {item.UnitPrice}");
+                Console.WriteLine($"Product: {item.ProductName}, Stock: {item.UnitsInStock}");
             }
             #endregion
         }
