@@ -353,6 +353,20 @@ namespace LINQ
             //Console.WriteLine($"Product: {result.ProductName}, Price: {result.UnitPrice}");
             #endregion
 
+            #region Question 17
+            // 17. Get the first product with a price greater than $500. Return null if no product is found.
+
+            //var result = Source.ProductList.FirstOrDefault(p => p.UnitPrice > 500);
+            //if (result == null)
+            //{
+            // Console.WriteLine("No product found");
+            //}
+            //else
+            //{
+            // Console.WriteLine($"Product: {result.ProductName}, Price: {result.UnitPrice}");
+            //}
+            #endregion
+
             #endregion
         }
     }
