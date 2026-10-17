@@ -11,6 +11,7 @@ namespace LINQ
     {
         static void Main()
         {
+            #region First Assignment
             #region Question 1
             //1.Get all products from the "Seafood" category.Print each
             //product's name and price.
@@ -172,20 +173,32 @@ namespace LINQ
             //letter is 'i' that is reversed from the order in the
             //original array.
 
-            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            //string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-            var result = Arr
-                .Where(word => word.Length > 1 && char.ToLower(word[1]) == 'i')
-                .Reverse()
-                .ToList();
+            //var result = Arr
+            //    .Where(word => word.Length > 1 && char.ToLower(word[1]) == 'i')
+            //    .Reverse()
+            //    .ToList();
 
-            foreach (var word in result)
-            {
-                Console.WriteLine(word);
-            }
-
+            //foreach (var word in result)
+            //{
+            //    Console.WriteLine(word);
+            //}
+            #endregion
             #endregion
 
+            #region Second Assignment
+            #region Question 1 
+            #region Question 1
+            // 1. Get the top 3 most expensive products. Print each product's name and price.
+
+            //var result = Source.ProductList.OrderByDescending(p => p.UnitPrice).Take(3);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
+            //}
+            #endregion
+            #endregion
         }
     }
 }
