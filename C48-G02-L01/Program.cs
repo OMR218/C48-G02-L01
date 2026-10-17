@@ -72,16 +72,27 @@ namespace LINQ
             //otherwise "Out of Stock"
             //● Print the result.
 
-            var result = Source.ProductList.Select(p => new
-            {
-                Name = p.ProductName,
-                Price = p.UnitPrice,
-                StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
-            });
+            //var result = Source.ProductList.Select(p => new
+            //{
+            //    Name = p.ProductName,
+            //    Price = p.UnitPrice,
+            //    StockStatus = p.UnitsInStock > 0 ? "Available" : "Out of Stock"
+            //});
 
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item.Name}, Price: {item.Price}, Stock Status: {item.StockStatus}");
+            //}
+            #endregion
+
+            #region Question 7
+            //7.Print each product's name along with its position (1-based) 
+            //in the list. Expected format: 1.Chai, 2.Chang, etc.
+
+            var result = Source.ProductList.Select((p, index) => new { Position = index + 1, ProductName = p.ProductName });
             foreach (var item in result)
             {
-                Console.WriteLine($"Product: {item.Name}, Price: {item.Price}, Stock Status: {item.StockStatus}");
+                Console.WriteLine($"{item.Position}. {item.ProductName}");
             }
             #endregion
         }
