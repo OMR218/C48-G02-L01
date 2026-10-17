@@ -219,6 +219,13 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 4
+            // 4. Check if all products in the "Seafood" category are in stock.
+
+            //var result = Source.ProductList.Where(p => p.Category == "Seafood").All(p => p.UnitsInStock > 0);
+            //Console.WriteLine(result);
+            #endregion
+
             #endregion
         }
     }
