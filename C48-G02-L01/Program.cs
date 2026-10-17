@@ -143,12 +143,30 @@ namespace LINQ
             #region Question 11
             //11.Show posiation number alongside ProductName
 
-            var result = Source.ProductList.Select((p, index) => new { Position = index + 1, ProductName = p.ProductName });
-            foreach (var item in result)
+            //var result = Source.ProductList.Select((p, index) => new { Position = index + 1, ProductName = p.ProductName });
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"{item.Position}. {item.ProductName}");
+            //}
+            #endregion
+
+            #region Question 12
+            //12.Sort first by-word length and then by a
+            //case -insensitive sort of the words in an array. 
+            //String[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            var result = Arr
+                .OrderBy(word => word.Length)
+                .ThenBy(word => word, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var word in result)
             {
-                Console.WriteLine($"{item.Position}. {item.ProductName}");
+                Console.WriteLine(word);
             }
             #endregion
+
         }
     }
 }
