@@ -398,6 +398,16 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 21
+            // 21. Pair each product with a customer by position and print "ProductName sold to CustomerName".
+
+            var result = Source.ProductList.Select((p, index) =>
+             $"{p.ProductName} sold to {Source.CustomerList[index].CustomerName}");
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            #endregion
             #endregion
         }
     }
