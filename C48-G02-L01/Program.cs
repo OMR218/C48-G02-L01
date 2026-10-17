@@ -208,6 +208,17 @@ namespace LINQ
             //    Console.WriteLine($"Product: {item.ProductName}, ID: {item.ProductID}");
             //}
             #endregion
+
+            #region Question 3
+            // 3. Take products as long as their UnitPrice is less than $25.
+
+            //var result = Source.ProductList.OrderBy(p => p.UnitPrice).TakeWhile(p => p.UnitPrice < 25);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
+            //}
+            #endregion
+
             #endregion
         }
     }
