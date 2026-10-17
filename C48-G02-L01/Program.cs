@@ -346,6 +346,13 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 16
+            // 16. Get the first product whose price is greater than $50.
+
+            //var result = Source.ProductList.First(p => p.UnitPrice > 50);
+            //Console.WriteLine($"Product: {result.ProductName}, Price: {result.UnitPrice}");
+            #endregion
+
             #endregion
         }
     }
