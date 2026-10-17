@@ -198,6 +198,16 @@ namespace LINQ
             //    Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
             //}
             #endregion
+
+            #region Question 2
+            // 2. Show page 2 of products, with a page size of 5.
+
+            //var result = Source.ProductList.Skip(5).Take(5);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item.ProductName}, ID: {item.ProductID}");
+            //}
+            #endregion
             #endregion
         }
     }
