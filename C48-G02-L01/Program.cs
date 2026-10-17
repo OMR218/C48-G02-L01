@@ -1,5 +1,6 @@
 ﻿using LINQ.DataSources;
 using LINQ.Models;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Globalization;
 using System.Xml.Linq;
@@ -128,14 +129,24 @@ namespace LINQ
             //all orders placed in 1997 or later showing CustomerID and
             //OrderDate.
 
-            var result = from C in Source.CustomerList
-                         from O in C.Orders
-                         where O.OrderDate.Year >= 1997
-                         select new { C.CustomerID, O.OrderDate };
+            //var result = from C in Source.CustomerList
+            //             from O in C.Orders
+            //             where O.OrderDate.Year >= 1997
+            //             select new { C.CustomerID, O.OrderDate };
 
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"CustomerID: {item.CustomerID}, OrderDate: {item.OrderDate:yyyy-MM-dd}");
+            //}
+            #endregion
+
+            #region Question 11
+            //11.Show posiation number alongside ProductName
+
+            var result = Source.ProductList.Select((p, index) => new { Position = index + 1, ProductName = p.ProductName });
             foreach (var item in result)
             {
-                Console.WriteLine($"CustomerID: {item.CustomerID}, OrderDate: {item.OrderDate:yyyy-MM-dd}");
+                Console.WriteLine($"{item.Position}. {item.ProductName}");
             }
             #endregion
         }
