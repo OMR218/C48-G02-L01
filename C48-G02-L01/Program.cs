@@ -334,6 +334,18 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 15
+            // 15. Build a Dictionary<int, Product> keyed by ProductID, then retrieve the product with ID = 18.
+
+            //var result = Source.ProductList.ToDictionary(p => p.ProductID);
+            //if (result.TryGetValue(18, out var product))
+            //{
+            // Console.WriteLine($"ID: {product.ProductID}");
+            // Console.WriteLine($"Name: {product.ProductName}");
+            // Console.WriteLine($"Price: {product.UnitPrice}");
+            //}
+            #endregion
+
             #endregion
         }
     }
