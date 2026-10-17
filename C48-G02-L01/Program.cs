@@ -267,6 +267,22 @@ namespace LINQ
             //}
             #endregion
 
+            #region Question 9
+            // 9. Using query syntax, group customers by Country and select Country, Count, and TotalOrderValue.
+
+            //var result = from c in Source.CustomerList
+            // group c by c.Country into countryGroup
+            // select new
+            // {
+            // Country = countryGroup.Key,
+            // Count = countryGroup.Count(),
+            // TotalOrderValue = countryGroup.Sum(c => c.Orders.Sum(o => o.Total))
+            // };
+            //foreach (var item in result)
+            //{
+            // Console.WriteLine($"Country: {item.Country}, Count: {item.Count}, TotalOrderValue: {item.TotalOrderValue}");
+            //}
+            #endregion
             #endregion
         }
     }
