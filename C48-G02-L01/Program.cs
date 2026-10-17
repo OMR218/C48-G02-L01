@@ -283,6 +283,14 @@ namespace LINQ
             // Console.WriteLine($"Country: {item.Country}, Count: {item.Count}, TotalOrderValue: {item.TotalOrderValue}");
             //}
             #endregion
+
+            #region Question 10
+            // 10. Calculate the total number of units in stock across all products.
+
+            //var result = Source.ProductList.Sum(p => p.UnitsInStock);
+            //Console.WriteLine(result);
+            #endregion
+
             #endregion
         }
     }
