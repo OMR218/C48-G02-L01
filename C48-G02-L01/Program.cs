@@ -1,5 +1,6 @@
 ﻿using LINQ.DataSources;
 using LINQ.Models;
+using System.Drawing;
 using static LINQ.DataSources.Source;
 namespace LINQ
 {
@@ -22,10 +23,21 @@ namespace LINQ
             //2.Get a list of only the product names from ProductList.Print
             //each name.
 
-            var result = Source.ProductList.Select(p => p.ProductName);
-            foreach (var item in result)
+            //var result = Source.ProductList.Select(p => p.ProductName);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine($"Product: {item}");
+            //}
+            #endregion
+
+            #region Question 3
+            //3.Sort all products by UnitPrice(ascending). Print each
+            //product's name and price.
+
+            var SortedProducts = Source.ProductList.OrderBy(p => p.UnitPrice);
+            foreach (var item in SortedProducts)
             {
-                Console.WriteLine($"Product: {item}");
+                Console.WriteLine($"Product: {item.ProductName}, Price: {item.UnitPrice}");
             }
             #endregion
         }
